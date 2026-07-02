@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Денежные переводы — Ариадна</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="transfer-body">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="logo-link" href="./main.html" aria-label="Ариадна, главная">
+          <img src="./icon/logo.svg" width="180" height="117" alt="Ариадна" />
+        </a>
+
+        <div class="header-content">
+          <div class="header-top" aria-label="Контакты">
+            <a class="top-link" href="#">
+              <img src="./icon/Group.svg" width="20" height="20" alt="" />
+              <span>Личный кабинет</span>
+            </a>
+            <a class="top-link" href="tel:88005053712">
+              <img src="./icon/Group-1.svg" width="20" height="20" alt="" />
+              <span>8 (800) 505 37 12</span>
+            </a>
+            <a class="top-link" href="mailto:info@aripay.ru">
+              <img src="./icon/mail.svg" width="20" height="20" alt="" />
+              <span>info@aripay.ru</span>
+            </a>
+          </div>
+
+          <div class="header-bottom">
+            <nav class="main-nav" aria-label="Основная навигация">
+              <a class="is-active" href="./main.html">Главная</a>
+              <a href="./payment.html">Оплата услуг</a>
+              <a href="./news.html">Информирование</a>
+              <a href="./faq.html">Вопросы и ответы</a>
+              <a href="./docs.html">Документы</a>
+              <a href="./contacts.html">Контакты</a>
+            </nav>
+            <div class="header-actions">
+              <form class="header-search" role="search">
+                <label class="sr-only" for="header-search">Поиск по сайту</label>
+                <img src="./icon/Label.svg" width="24" height="24" alt="" />
+                <input id="header-search" name="q" type="search" placeholder="Поиск по сайту" />
+              </form>
+              <a class="pay-button" href="./payment.html">Оплатить связь</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="transfer-hero">
+        <div class="page-container transfer-hero__grid">
+          <div class="transfer-hero__copy">
+            <nav class="breadcrumbs" aria-label="Хлебные крошки">
+              <a href="./main.html">Главная</a>
+              <span>/</span>
+              <span>Денежные переводы</span>
+            </nav>
+            <h1>
+  Денежные переводы<br />
+  от «Ариадны» — это быстро,<br />
+  понятно и надёжно
+</h1>
+            <p>Ваша поддержка важна для близких,<br />и мы делаем её отправку максимально удобной</p>
+            <a class="btn btn-primary" href="./payment.html">Сделать перевод</a>
+          </div>
+
+          <div class="transfer-hero__media" aria-hidden="true">
+            <img src="./assets/payment-hero.png" width="728" height="700" alt="" />
+            <div class="commission-card commission-card--left">
+              <strong>5%</strong>
+              <span>Комиссия для <br> пользователей <b>Безлимита</b></span>
+            </div>
+            <div class="commission-card commission-card--right">
+              <strong>5,5%</strong> 
+              <span>Комиссия <br>для всех переводов</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="transfer-content page-container" aria-label="Способы перевода">
+        <div class="transfer-method">
+          <h2>Способ 1: Перевод через сайт</h2>
+          <div class="transfer-method__grid">
+            <article class="transfer-card transfer-card--site">
+              <div class="transfer-card__copy">
+                <p>Идеально подходит для разовых отправлений. Просто зайдите на наш сайт с любого устройства и заполните форму перевода.</p>
+                <a class="btn btn-primary" href="./payment.html">Сделать перевод</a>
+              </div>
+              <img src="./assets/laptop.png" width="996" height="662" alt="Форма денежного перевода на сайте Ариадна" />
+            </article>
+
+            <div class="transfer-side">
+              <article class="process-panel">
+                <h3>Как это работает?</h3>
+                <ol class="process-grid">
+                  <li><span>1</span>Нажмите на кнопку «Сделать перевод»</li>
+                  <li><span>2</span>Выберите учреждение</li>
+                  <li><span>3</span>Заполните и проверьте данные получателя</li>
+                  <li><span>4</span>Заполните информацию о себе и сумму перевода</li>
+                </ol>
+              </article>
+
+              <aside class="notice-card">
+                <img src="./icon/mark.svg" width="24" height="24" alt="" />
+                <div>
+                  <h3>Обратите внимание!</h3>
+                  <p>В целях безопасности при использовании сайта ваши личные данные не сохраняются, поэтому необходимо будет ввести их ещё раз при каждом новом переводе.</p>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+
+        <div class="transfer-method transfer-method--app">
+          <h2>Способ 2: Перевод через мобильное приложение</h2>
+          <div class="transfer-method__grid transfer-method__grid--app">
+            <article class="transfer-card transfer-card--app transfer-card--app-exact">
+              <div class="transfer-card__copy transfer-card__copy--app-exact">
+                <p>Выбирайте приложение для регулярных переводов. Это самый быстрый и комфортный способ, который экономит ваше время.</p>
+                <p class="transfer-card__accent">Ваша забота уже в пути к тому,<br />кто в ней так нуждается.</p>
+                <a class="btn btn-primary transfer-card__button-app" href="./app.html">Скачать приложение</a>
+              </div>
+              <img src="./assets/mokker.png" width="468" height="595" alt="Экран нового перевода в приложении Ариадна" />
+            </article>
+
+            <article class="process-panel process-panel--app-exact">
+              <h3>Как отправить перевод через приложение?</h3>
+              <ol class="process-grid process-grid--app-exact">
+                <li>
+                  <span>1</span>
+                  <div>Скачайте и откройте мобильное приложение «Ариадна»</div>
+                </li>
+                <li>
+                  <span>2</span>
+                  <div>Выберите в меню Денежные переводы</div>
+                </li>
+                <li>
+                  <span>3</span>
+                  <div>При первом использовании заполните информацию о себе</div>
+                </li>
+                <li>
+                  <span>4</span>
+                  <div>Проверьте данные получателя, введите сумму — и готово!</div>
+                </li>
+              </ol>
+            </article>
+          </div>
+
+          <article class="benefits-panel">
+            <h3>Почему мобильное приложение удобнее?</h3>
+            <div class="benefits-grid">
+              <div class="benefit-card">
+                <img src="./icon/app3.svg" alt="">
+                <h4>Данные сохраняются</h4>
+                <p>После первого перевода приложение запоминает вашу контактную информацию</p>
+              </div>
+              <div class="benefit-card">
+                <img src="./icon/app1.svg" alt="">
+                <h4>Перевод в несколько касаний</h4>
+                <p>Все последующие переводы занимают считанные секунды — вам нужно только проверить данные получателя и ввести сумму</p>
+              </div>
+              <div class="benefit-card">
+                <img src="./icon/app2.svg" alt="">
+                <h4>Забота всегда под рукой</h4>
+                <p>Отправляйте поддержку, когда удобно, где бы вы ни были.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="unlimited-section page-container" aria-label="Безлимитный тариф">
+        <div class="unlimited-panel">
+          <h2 class="unlimited-panel__title">
+            <span>Подключите Безлимитный тариф в мобильном приложении</span>
+
+          </h2>
+          <div class="unlimited-offers" aria-label="Преимущества тарифа">
+            <article class="offer-card">
+              <strong>99 ₽</strong>
+              <del>999 ₽</del>
+              <span>Первый месяц подключения</span>
+            </article>
+            <article class="offer-card">
+              <strong>4 ₽</strong>
+              <del>5 ₽</del>
+              <span>За минуту разговора по видеосвязи</span>
+            </article>
+            <article class="offer-card">
+              <strong>5%</strong>
+              <del>5,5%</del>
+              <span>Комиссия с переводов денежных средств</span>
+            </article>
+            <article class="offer-card">
+              <strong>5%</strong>
+              <span>Скидка на звонки на мобильный телефон</span>
+            </article>
+          </div>
+          <a class="btn btn-primary unlimited-panel__button" href="./unlimited.html">Подробнее о Безлимите</a>
+          <aside class="unlimited-qr">
+            <img src="./icon/qr-main.png" width="302" height="298" alt="QR-код для скачивания приложения Ариадна" />
+
+          </aside>
+        </div>
+      </section>
+
+      <section class="faq-section page-container" id="transfer-faq">
+        <h2>Вопросы</h2>
+        <div class="faq-grid">
+          <div class="faq-list" aria-label="Популярные вопросы">
+            <details>
+              <summary>Как осуществить оплату?</summary>
+              <p>Выберите способ перевода, заполните данные получателя и подтвердите оплату.</p>
+            </details>
+            <details>
+              <summary>Условия использования сервиса</summary>
+              <p>Сервис доступен для переводов в учреждения, подключенные к системе «Ариадна».</p>
+            </details>
+            <details>
+              <summary>Почему в списке нет нужного учреждения?</summary>
+              <p>Учреждение может быть временно недоступно. Проверьте список позже или обратитесь в поддержку.</p>
+            </details>
+          </div>
+
+          <aside class="transfer-info-panel">
+            <h3>Важная информация для всех переводов</h3>
+            <div class="info-row">
+              <img src="./icon/mark.svg" width="24" height="24" alt="" />
+              <p>Деньги поступают в учреждение в срок до 3 рабочих дней <br> <br> Окончательное зачисление средств на лицевой счёт зависит от внутреннего распорядка и графика работы бухгалтерии исправительного учреждения</p>
+              <p></p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="questions-section page-container">
+        <div class="questions-panel">
+          <div class="questions-copy">
+            <h2>Возникли сложности<br />с использованием сервиса?</h2>
+            <p>Обратитесь к онлайн-консультантам — они оперативно ответят на все ваши вопросы</p>
+          </div>
+          <a class="contact-card contact-card-chat" href="#">
+            <img src="./icon/icon-contact-2.svg" width="40" height="40" alt="" />
+            <h3>Чат мобильного приложения</h3>
+            <p>— раздел «Помощь»</p>
+          </a>
+          <a class="contact-card contact-card-telegram" href="#">
+            <img src="./icon/icon-contact-3.svg" width="40" height="40" alt="" />
+            <h3>Официальный Телеграм</h3>
+          </a>
+          <img class="operator-image" src="./assets/woman.png" width="575" height="450" alt="Оператор службы поддержки Ариадна" />
+          <a class="contact-card contact-card-site" href="#">
+            <img src="./icon/icon-contact.svg" width="40" height="40" alt="" />
+            <h3>Сайт</h3>
+            <p>ариадна.рус</p>
+          </a>
+          <a class="contact-card contact-card-phone" href="tel:88005053712">
+            <img src="./icon/icon-contact-1.svg" width="40" height="40" alt="" />
+            <h3>Телефон</h3>
+            <p>8 (800) 505 37 12</p>
+          </a>
+          <aside class="attention-card">
+            <img src="./icon/mark.svg" width="24" height="24" alt="" />
+            <div>
+              <h3>Обращаем внимание</h3>
+              <p>В круглосуточном режиме работает только телефон. Остальные обращения рассматриваются в рабочее время контакт-центра с 8:00 до 21:00 по красноярскому времени</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a class="footer-logo" href="./main.html" aria-label="Ариадна, главная">
+            <img src="./icon/logo-white.svg" width="186" height="108" alt="Ариадна" />
+          </a>
+          <p>© ООО «А-Плюс», 2026. Все права защищены.</p>
+          <p>660075, г. Красноярск, ул. Красной Гвардии, дом 24 помещение 7, кабинет 300/5</p>
+          <a class="privacy-link" href="#">Политика в отношении обработки персональных данных</a>
+        </div>
+        <nav class="footer-nav footer-nav-primary" aria-label="Основные разделы">
+          <a href="./main.html">Главная</a>
+          <a href="./payment.html">Оплата услуг</a>
+          <a href="./faq.html">Вопросы и ответы</a>
+        </nav>
+        <nav class="footer-nav footer-nav-secondary" aria-label="Информация">
+          <a href="./docs.html">Документы</a>
+          <a href="./contacts.html">Контакты</a>
+          <a href="./news.html">Информирование</a>
+        </nav>
+        <nav class="footer-nav footer-nav-services" aria-label="Услуги">
+          <a href="./videomeeting.html">Видеосвидание</a>
+          <a href="./index.html">Денежные переводы</a>
+          <a href="./app.html">Мобильное приложение</a>
+          <a href="./app.html#app-setup">Инструкция для приложения</a>
+          <a href="./unlimited.html">Безлимитный тариф в приложении «Ариадна»</a>
+        </nav>
+        <div class="footer-contact">
+          <a class="footer-phone" href="tel:88005053712">8 (800) 505 37 12</a>
+          <a class="footer-mail" href="mailto:info@aripay.ru">info@aripay.ru</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

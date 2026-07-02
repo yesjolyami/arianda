@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Способы оплаты — Ариадна</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="payment-body">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="logo-link" href="./main.html" aria-label="Ариадна, главная">
+          <img src="./icon/logo.svg" width="180" height="117" alt="Ариадна" />
+        </a>
+
+        <div class="header-content">
+          <div class="header-top" aria-label="Контакты">
+            <a class="top-link" href="#">
+              <img src="./icon/Group.svg" width="20" height="20" alt="" />
+              <span>Личный кабинет</span>
+            </a>
+            <a class="top-link" href="tel:88005053712">
+              <img src="./icon/Group-1.svg" width="20" height="20" alt="" />
+              <span>8 (800) 505 37 12</span>
+            </a>
+            <a class="top-link" href="mailto:info@aripay.ru">
+              <img src="./icon/mail.svg" width="20" height="20" alt="" />
+              <span>info@aripay.ru</span>
+            </a>
+          </div>
+
+          <div class="header-bottom">
+            <nav class="main-nav" aria-label="Основная навигация">
+              <a href="./main.html">Главная</a>
+              <a class="is-active" href="./payment.html">Оплата услуг</a>
+              <a href="./news.html">Информирование</a>
+              <a href="./faq.html">Вопросы и ответы</a>
+              <a href="./docs.html">Документы</a>
+              <a href="./contacts.html">Контакты</a>
+            </nav>
+            <div class="header-actions">
+              <form class="header-search" role="search">
+                <label class="sr-only" for="header-search">Поиск по сайту</label>
+                <img src="./icon/Label.svg" width="24" height="24" alt="" />
+                <input id="header-search" name="q" type="search" placeholder="Поиск по сайту" />
+              </form>
+              <a class="pay-button" href="./payment.html">Оплатить связь</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="payment-section page-container">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+          <a href="./main.html">Главная</a>
+          <span>/</span>
+          <span>Способы оплаты</span>
+        </nav>
+
+        <h1>Способы оплаты</h1>
+        <p class="payment-lead">Оплатить аудио- и видеосвязь оператора «Ариадна» можно тремя способами:</p>
+
+        <div class="payment-method-grid">
+          <article class="payment-method-card">
+            <span class="payment-number">1</span>
+            <p>Родственники пополняют логин осуждённого в разделе «Контакты» <strong>мобильного приложения «Ариадна»</strong></p>
+          </article>
+          <article class="payment-method-card">
+            <span class="payment-number">2</span>
+            <p>Родственники пополняют логин осуждённого через стартовую страницу сайта <strong>ариадна.рус</strong></p>
+          </article>
+          <article class="payment-method-card">
+            <span class="payment-number">3</span>
+            <p>Осуждённый самостоятельно покупает карту оплаты услуг «Ариадна» нужного номинала в магазине исправительного учреждения и активирует её с помощью инструкции на оборотной стороне.</p>
+          </article>
+
+          <aside class="payment-note">
+            <img src="./icon/mark.svg" width="24" height="24" alt="" />
+            <div>
+              <h2>Средства на логине предназначены исключительно для аудио- и видеозвонков с близкими</h2>
+              <p>Они не могут быть использованы для других целей и могут применяться только для оплаты услуг связи в приложении «Ариадна»</p>
+            </div>
+          </aside>
+
+          <aside class="payment-banks" aria-label="Поддерживаемые способы оплаты">
+            <img src="./icon/lg.png" width="364" height="66" alt="PayKeeper, Visa, Mastercard, Мир, СБП" />
+          </aside>
+        </div>
+      </section>
+
+      <section class="payment-faq page-container" id="payment-faq">
+        <h2>Вопросы</h2>
+        <div class="payment-faq-grid">
+          <div class="payment-faq-list" aria-label="Частые вопросы по оплате">
+            <article class="payment-faq-item is-open">
+              <button class="payment-faq-trigger" type="button" aria-expanded="true" aria-controls="payment-faq-panel-1" id="payment-faq-trigger-1">
+                <span>Как пополнить логин осуждённого через сайт ариадна.рус?</span>
+              </button>
+              <div class="payment-faq-answer" id="payment-faq-panel-1" role="region" aria-labelledby="payment-faq-trigger-1">
+                <p>Перейдите на <a href="#">главную страницу сайта</a> и найдите строку «Внесение платежа на оплату услуг связи». В неё впишите логин, на который необходимо зачислить деньги, и сумму платежа.</p>
+                <p>Далее нажмите «Перейти к оплате».</p>
+                <p>Введите код с картинки, электронную почту для отправки чека и нажмите «Продолжить».</p>
+                <p>Проверьте данные и нажмите «Подтвердить».</p>
+                <p>Выберите удобный способ оплаты (карта или СБП) и завершите платёж. К оплате принимаются все виды карт МИР, Visa (кроме Electron), Mastercard (кроме Maestro).</p>
+              </div>
+            </article>
+
+            <article class="payment-faq-item">
+              <button class="payment-faq-trigger" type="button" aria-expanded="false" aria-controls="payment-faq-panel-2" id="payment-faq-trigger-2">
+                <span>Как оплатить связь «Ариадна» в мобильном приложении?</span>
+              </button>
+              <div class="payment-faq-answer" id="payment-faq-panel-2" role="region" aria-labelledby="payment-faq-trigger-2" hidden>
+                <p><a href="#">Скачайте мобильное приложение</a> и войдите в раздел «Контакты». Под ФИО осуждённого вы увидите сумму на его балансе, а также кнопку «Пополнить».</p>
+                <p>Далее введите сумму пополнения (не меньше 10 ₽), нажмите на значок банковской карты и выберите удобный способ оплаты.</p>
+              </div>
+            </article>
+
+            <article class="payment-faq-item">
+              <button class="payment-faq-trigger" type="button" aria-expanded="false" aria-controls="payment-faq-panel-3" id="payment-faq-trigger-3">
+                <span>Что делать, если я ошибся и пополнил не тот логин осуждённого?</span>
+              </button>
+              <div class="payment-faq-answer" id="payment-faq-panel-3" role="region" aria-labelledby="payment-faq-trigger-3" hidden>
+                <p>Напишите заявление о переводе денежных средств на нужный логин осуждённого. Его форму можно найти в разделе <a href="./docs.html">«Документы»</a>.</p>
+                <p>Далее отправьте заявление нашим специалистам на адрес info@aripay.ru.</p>
+                <p>Также вы можете вернуть деньги. Форма заявления на возврат доступна в разделе <a href="./docs.html">«Документы»</a>.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="footer-logo" href="./main.html" aria-label="Ариадна, главная">
+          <img src="./icon/logo-white.svg" width="186" height="108" alt="Ариадна" />
+        </a>
+
+        <nav class="footer-nav footer-nav-primary" aria-label="Услуги">
+          <a href="./main.html">Главная</a>
+          <a href="./videomeeting.html">Видеосвидание</a>
+          <a href="./index.html">Денежные переводы</a>
+          <a href="./app.html">Мобильное приложение</a>
+          <a href="./app.html#app-setup">Инструкция для приложения</a>
+          <a href="./unlimited.html">Безлимитный тариф в приложении «Ариадна»</a>
+        </nav>
+
+        <nav class="footer-nav footer-nav-secondary" aria-label="Информация">
+          <a href="./payment.html">Оплата услуг</a>
+          <a href="./news.html">Информирование</a>
+          <a href="./faq.html">Вопросы и ответы</a>
+          <a href="./docs.html">Документы</a>
+          <a href="./contacts.html">Контакты</a>
+        </nav>
+
+        <div class="footer-contact">
+          <a class="footer-phone" href="tel:88005053712">8 (800) 505 37 12</a>
+          <a class="footer-mail" href="mailto:info@aripay.ru">info@aripay.ru</a>
+          <p>© ООО «А-Плюс», 2026. Все права защищены.</p>
+          <p>660075, г. Красноярск, ул. Красной Гвардии, дом 24 помещение 7, кабинет 300/5</p>
+          <a class="privacy-link" href="#">Политика в отношении обработки персональных данных</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

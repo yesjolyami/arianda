@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Видеосвидание — Ариадна</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="video-body">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="logo-link" href="./main.html" aria-label="Ариадна, главная">
+          <img src="./icon/logo.svg" width="180" height="117" alt="Ариадна" />
+        </a>
+
+        <div class="header-content">
+          <div class="header-top" aria-label="Контакты">
+            <a class="top-link" href="#">
+              <img src="./icon/Group.svg" width="20" height="20" alt="" />
+              <span>Личный кабинет</span>
+            </a>
+            <a class="top-link" href="tel:88005053712">
+              <img src="./icon/Group-1.svg" width="20" height="20" alt="" />
+              <span>8 (800) 505 37 12</span>
+            </a>
+            <a class="top-link" href="mailto:info@aripay.ru">
+              <img src="./icon/mail.svg" width="20" height="20" alt="" />
+              <span>info@aripay.ru</span>
+            </a>
+          </div>
+
+          <div class="header-bottom">
+            <nav class="main-nav" aria-label="Основная навигация">
+              <a class="is-active" href="./main.html">Главная</a>
+              <a href="./payment.html">Оплата услуг</a>
+              <a href="./news.html">Информирование</a>
+              <a href="./faq.html">Вопросы и ответы</a>
+              <a href="./docs.html">Документы</a>
+              <a href="./contacts.html">Контакты</a>
+            </nav>
+            <div class="header-actions">
+              <form class="header-search" role="search">
+                <label class="sr-only" for="header-search">Поиск по сайту</label>
+                <img src="./icon/Label.svg" width="24" height="24" alt="" />
+                <input id="header-search" name="q" type="search" placeholder="Поиск по сайту" />
+              </form>
+              <a class="pay-button" href="./payment.html">Оплатить связь</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-section">
+        <div class="page-container hero-grid">
+          <div class="hero-copy">
+            <nav class="breadcrumbs" aria-label="Хлебные крошки">
+              <a href="./main.html">Главная</a>
+              <span>/</span>
+              <span>Видеосвидание</span>
+            </nav>
+            <h1>Обменивайтесь новостями с родными в учреждениях ФСИН через мобильное приложение</h1>
+            <p>Услуга «Видеосвидание» доступна всем пользователям, установившим мобильное приложение «Ариадна»</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#">Скачать в Google Play</a>
+              <button class="btn btn-secondary" type="button" data-open-qr>Отсканировать QR-код</button>
+            </div>
+          </div>
+          <div class="hero-media" aria-hidden="true">
+            <img src="./assets/videomeeting-hero.png" width="705" height="625" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section class="instruction-section page-container">
+        <div class="instruction-panel">
+          <h2>Как принять видеозвонок на приложение «Ариадна»?</h2>
+          <article class="step-card step-card--with-screen">
+            <span class="step-badge">1</span>
+            <div>
+              <h3>Убедитесь, что вы установили на смартфон мобильное приложение «Ариадна» в Google Play.</h3>
+              <p>Не забудьте в настройках приложения отметить галочкой все разрешения</p>
+            </div>
+            <img src="./screens/img.jpg" width="135" height="268" alt="Экран настроек приложения Ариадна" />
+          </article>
+
+          <article class="step-card">
+            <span class="step-badge">2</span>
+            <h3>Удостоверьтесь, что осуждённый зарегистрировался в сети «Ариадна».</h3>
+            <p>Для этого нужно заполнить анкету «Ариадна» у сотрудника ФСИН. После этого осуждённому будет присвоен логин, и он появится в разделе «Контакты» мобильного приложения родственника.</p>
+          </article>
+
+          <article class="step-card step-card--with-screen">
+            <span class="step-badge">3</span>
+            <div>
+              <h3>Проверьте, достаточно ли средств на счёту осуждённого. При необходимости пополните его счёт</h3>
+              <a href="#">Узнать способы оплаты</a>
+            </div>
+            <img src="./screens/img-1.jpg" width="135" height="268" alt="Экран контакта в приложении Ариадна" />
+          </article>
+
+          <article class="step-card step-card--with-screen">
+            <span class="step-badge">4</span>
+            <div>
+              <h3>Ожидайте входящего вызова</h3>
+              <p>Нажмите зелёную кнопку, чтобы оставаться в сети</p>
+            </div>
+            <img src="./screens/img-2.jpg" width="135" height="268" alt="Экран входящего вызова" />
+          </article>
+
+          <article class="step-card step-card--with-screen">
+            <span class="step-badge step-badge--dark">!</span>
+            <div>
+              <h3>Перед сеансом видеосвязи советуем проверить качество соединения</h3>
+              <p>Для этого сделайте пробный звонок в наш контакт-центр из приложения. Функция доступна в разделе «Поддержка».</p>
+            </div>
+            <img src="./screens/img-3.jpg" width="135" height="268" alt="Экран поддержки в приложении Ариадна" />
+          </article>
+        </div>
+      </section>
+
+      <section class="reasons-section page-container">
+        <h2>Почему на телефон не поступает видеозвонок?</h2>
+        <div class="reason-grid">
+          <article class="reason-card">
+            <span class="step-badge">1</span>
+            <h3>Убедитесь, что осуждённый вписал ваш номер в анкету при регистрации в системе «Ариадна»</h3>
+            <p>Если он сделал это, то его ФИО будет в разделе «Контакты»</p>
+          </article>
+          <article class="reason-card">
+            <span class="step-badge">2</span>
+            <h3>Убедитесь, что на логине осуждённого есть средства</h3>
+            <p>Баланс указан под ФИО осуждённого в разделе «Контакты»</p>
+          </article>
+          <article class="reason-card">
+            <span class="step-badge">3</span>
+            <h3>Удостоверьтесь, что нет проблем с сотовой связью и Wi-Fi-сетью</h3>
+            <p>При необходимости переключитесь между ними</p>
+          </article>
+          <article class="reason-card reason-card--wide">
+            <span class="step-badge">4</span>
+            <h3>Проверьте разрешения приложения «Ариадна»</h3>
+            <p>Необходимо обеспечить доступ к видеокамере, микрофону, памяти смартфона. Убедитесь, что функции «Отключение блокировки экрана», «Запуск активных сервисов», «Отключение спящего режима», «Показ уведомлений», «Изменение настроек аудио» и др. активны</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="questions-section page-container">
+        <div class="questions-panel">
+          <div class="questions-copy">
+            <h2>Возникли сложности<br />с использованием сервиса?</h2>
+            <p>Обратитесь к онлайн-консультантам — они оперативно ответят на все ваши вопросы</p>
+          </div>
+
+          <div class="contact-card contact-card-chat">
+            <img src="./icon/icon-contact-2.svg" width="40" height="40" alt="" />
+            <h3>Чат мобильного приложения</h3>
+            <p>— раздел «Помощь»</p>
+          </div>
+          <div class="contact-card contact-card-telegram">
+            <img src="./icon/icon-contact-3.svg" width="40" height="40" alt="" />
+            <h3>Официальный Телеграм</h3>
+          </div>
+          <img class="operator-image" src="./assets/woman.png" width="575" height="450" alt="Оператор службы поддержки Ариадна" />
+          <div class="contact-card contact-card-site">
+            <img src="./icon/icon-contact.svg" width="40" height="40" alt="" />
+            <h3>Сайт</h3>
+            <p>ариадна.рус</p>
+          </div>
+          <div class="contact-card contact-card-phone">
+            <img src="./icon/icon-contact-1.svg" width="40" height="40" alt="" />
+            <h3>Телефон</h3>
+            <p>8 (800) 505 37 12</p>
+          </div>
+          <aside class="attention-card">
+            <img src="./icon/mark.svg" width="24" height="24" alt="" />
+            <div>
+              <h3>Обращаем внимание</h3>
+              <p>В круглосуточном режиме работает только телефон. Остальные обращения рассматриваются в рабочее время контакт-центра с 8:00 до 21:00 по красноярскому времени</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <div class="qr-modal" id="qr-modal" hidden>
+      <div class="qr-modal__backdrop" data-close-qr></div>
+      <div class="qr-modal__dialog" role="dialog" aria-modal="true" aria-label="QR-код для скачивания приложения">
+        <div class="qr-modal__panel">
+          <img src="./assets/qr-code.png" width="302" height="298" alt="QR-код для скачивания приложения Ариадна" />
+        </div>
+        <button class="qr-modal__close" type="button" aria-label="Закрыть окно" data-close-qr>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="footer-logo" href="./main.html" aria-label="Ариадна, главная">
+          <img src="./icon/logo-white.svg" width="186" height="108" alt="Ариадна" />
+        </a>
+
+        <nav class="footer-nav footer-nav-primary" aria-label="Услуги">
+          <a href="./main.html">Главная</a>
+          <a href="#">Видеосвидание</a>
+          <a href="./index.html">Денежные переводы</a>
+          <a href="./app.html">Мобильное приложение</a>
+          <a href="./app.html#app-setup">Инструкция для приложения</a>
+          <a href="./unlimited.html">Безлимитный тариф в приложении «Ариадна»</a>
+        </nav>
+
+        <nav class="footer-nav footer-nav-secondary" aria-label="Информация">
+          <a href="./payment.html">Оплата услуг</a>
+          <a href="./news.html">Информирование</a>
+          <a href="./faq.html">Вопросы и ответы</a>
+          <a href="./docs.html">Документы</a>
+          <a href="./contacts.html">Контакты</a>
+        </nav>
+
+        <div class="footer-contact">
+          <a class="footer-phone" href="tel:88005053712">8 (800) 505 37 12</a>
+          <a class="footer-mail" href="mailto:info@aripay.ru">info@aripay.ru</a>
+          <p>© ООО «А-Плюс», 2026. Все права защищены.</p>
+          <p>660075, г. Красноярск, ул. Красной Гвардии, дом 24 помещение 7, кабинет 300/5</p>
+          <a class="privacy-link" href="#">Политика в отношении обработки персональных данных</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

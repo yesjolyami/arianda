@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Главная — Ариадна</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="main-body">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="logo-link" href="./main.html" aria-label="Ариадна, главная">
+          <img src="./icon/logo.svg" width="180" height="117" alt="Ариадна" />
+        </a>
+
+        <div class="header-content">
+          <div class="header-top" aria-label="Контакты">
+            <a class="top-link" href="#">
+              <img src="./icon/Group.svg" width="20" height="20" alt="" />
+              <span>Личный кабинет</span>
+            </a>
+            <a class="top-link" href="tel:88005053712">
+              <img src="./icon/Group-1.svg" width="20" height="20" alt="" />
+              <span>8 (800) 505 37 12</span>
+            </a>
+            <a class="top-link" href="mailto:info@aripay.ru">
+              <img src="./icon/mail.svg" width="20" height="20" alt="" />
+              <span>info@aripay.ru</span>
+            </a>
+          </div>
+
+          <div class="header-bottom">
+            <nav class="main-nav" aria-label="Основная навигация">
+              <a class="is-active" href="./main.html">Главная</a>
+              <a href="./payment.html">Оплата услуг</a>
+              <a href="./news.html">Информирование</a>
+              <a href="./faq.html">Вопросы и ответы</a>
+              <a href="./docs.html">Документы</a>
+              <a href="./contacts.html">Контакты</a>
+            </nav>
+            <div class="header-actions">
+              <form class="header-search" role="search">
+                <label class="sr-only" for="header-search">Поиск по сайту</label>
+                <img src="./icon/Label.svg" width="24" height="24" alt="" />
+                <input id="header-search" name="q" type="search" placeholder="Поиск по сайту" />
+              </form>
+              <a class="pay-button" href="./payment.html" data-open-payment>Оплатить связь</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="main-hero" data-main-hero>
+        <article class="main-hero-slide main-hero-slide--unlimited is-active" data-main-slide>
+          <div class="page-container main-hero__grid">
+            <div class="main-hero__copy">
+              <h1>Безлимит за <strong>99 ₽!</strong> <del>399 ₽</del></h1>
+              <p>Подключайте безлимитный тариф в мобильном приложении впервые с максимальной выгодой и пользуйтесь всеми преимуществами</p>
+
+              <div class="main-offer-row" aria-label="Преимущества тарифа">
+                <article class="main-offer-card">
+                  <strong>4 ₽</strong>
+                  <del>5 ₽</del>
+                  <span>За минуту разговора<br />по видеосвязи</span>
+                </article>
+                <article class="main-offer-card">
+                  <strong>5%</strong>
+                  <del>5,5%</del>
+                  <span>Комиссия с переводов<br />денежных средств</span>
+                </article>
+                <article class="main-offer-card">
+                  <strong>5%</strong>
+                  <span>Скидка на звонки<br />на мобильный телефон</span>
+                </article>
+              </div>
+
+              <div class="main-hero__actions">
+                <a class="btn btn-primary" href="./unlimited.html">Подробнее о безлимите</a>
+                <a class="btn btn-secondary" href="./app.html">Подробнее о приложении</a>
+              </div>
+            </div>
+
+            <div class="main-hero__media" aria-hidden="true">
+              <img src="./assets/main-hero.png" width="728" height="700" alt="" />
+            </div>
+          </div>
+        </article>
+
+        <article class="main-hero-slide main-hero-slide--video" data-main-slide>
+          <div class="page-container main-hero__grid">
+            <div class="main-hero__copy">
+              <h1>Общайтесь с близкими по аудио-<br />и видеосвязи в мобильном приложении «Ариадна»</h1>
+
+              <div class="main-offer-row" aria-label="Стоимость связи">
+                <article class="main-offer-card">
+                  <strong>0,7 ₽</strong>
+                  <span>за минуту<br />аудиозвонка с мамой</span>
+                </article>
+                <article class="main-offer-card">
+                  <strong>1,98 ₽</strong>
+                  <span>за остальные<br />аудиовызовы</span>
+                </article>
+                <article class="main-offer-card">
+                  <strong>5 ₽</strong>
+                  <span>за минуту разговора<br />по видеосвязи</span>
+                </article>
+              </div>
+
+              <div class="main-hero__actions">
+                <a class="btn btn-primary" href="./videomeeting.html">Подробнее о видеосвидании</a>
+                <a class="btn btn-secondary" href="./app.html">Подробнее о приложении</a>
+              </div>
+            </div>
+
+            <div class="main-hero__media" aria-hidden="true">
+              <img src="./assets/img-1.png" width="502" height="520" alt="" />
+            </div>
+          </div>
+        </article>
+
+        <article class="main-hero-slide main-hero-slide--transfer" data-main-slide>
+          <div class="page-container main-hero__grid">
+            <div class="main-hero__copy">
+              <h1>Переводите деньги<br />с комиссией 5,5%!</h1>
+              <p>Услуга доступна на сайте и в мобильном приложении «Ариадна»</p>
+
+              <div class="main-hero__actions">
+                <a class="btn btn-primary" href="./index.html">Подробнее о переводах</a>
+                <a class="btn btn-secondary" href="./app.html">Подробнее о приложении</a>
+              </div>
+            </div>
+
+            <div class="main-hero__media" aria-hidden="true">
+              <img src="./assets/hand-w-phone.png" width="678" height="452" alt="" />
+            </div>
+          </div>
+        </article>
+
+        <div class="page-container main-hero-controls" aria-label="Управление слайдами">
+          <div class="main-slider-dots" aria-label="Выбор слайда">
+            <button class="is-active" type="button" data-main-slide-to="0" aria-label="Показать слайд 1" aria-pressed="true"></button>
+            <button type="button" data-main-slide-to="1" aria-label="Показать слайд 2" aria-pressed="false"></button>
+            <button type="button" data-main-slide-to="2" aria-label="Показать слайд 3" aria-pressed="false"></button>
+          </div>
+          <div class="main-hero-arrows">
+            <button type="button" data-main-prev aria-label="Предыдущий слайд">←</button>
+            <button type="button" data-main-next aria-label="Следующий слайд">→</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-payment page-container" aria-labelledby="main-payment-title">
+        <h2 id="main-payment-title">Внесение платежа<br />на оплату услуг связи<span class="main-payment-note" tabindex="0" aria-label="Отправление денежных средств заключённому на счёт ФСИН">*</span></h2>
+        <form class="main-payment-form" action="./payment.html" method="get" data-payment-source>
+          <div class="main-payment-field">
+            <label class="sr-only" for="payment-login">Логин осужденного</label>
+            <input id="payment-login" name="login" type="text" inputmode="numeric" autocomplete="off" placeholder="Логин осужденного" aria-describedby="payment-login-error" required />
+            <p class="main-payment-error" id="payment-login-error" aria-live="polite" hidden></p>
+          </div>
+          <div class="main-payment-field">
+            <label class="sr-only" for="payment-amount">Сумма платежа</label>
+            <input id="payment-amount" name="amount" type="text" inputmode="numeric" placeholder="Сумма платежа" aria-describedby="payment-amount-error" required />
+            <p class="main-payment-error" id="payment-amount-error" aria-live="polite" hidden></p>
+          </div>
+          <button class="btn btn-primary" type="submit">Перейти к оплате</button>
+        </form>
+      </section>
+
+      <section class="main-about page-container" aria-labelledby="main-about-title">
+        <h2 id="main-about-title">О нас</h2>
+        <p class="main-about__lead">«Ариадна» — это оператор связи в учреждениях ФСИН.<br />Мы предоставляем осуждённым и их семьям аудио- и видеосвязь по всей стране. Общаться с нами удобно и выгодно.</p>
+
+        <div class="main-about-grid">
+          <article class="main-service-card main-service-card--audio">
+            <div>
+              <h3>Аудиосвязь</h3>
+              <p>Принимайте звонки из исправительного учреждения на стационарный номер и сотовый телефон в любой точке мира!</p>
+              <a href="./faq.html">Подробнее</a>
+            </div>
+            <img src="./assets/1dc.png" width="502" height="520" alt="Девушка разговаривает по телефону" />
+          </article>
+
+          <article class="main-service-card main-service-card--video">
+            <div>
+              <h3>Денежные переводы</h3>
+              <p>Переводите средства близким через сайт для разовых отправлений и через мобильное приложение для регулярных переводов.</p>
+              <a href="./index.html">Подробнее</a>
+            </div>
+            <img src="./assets/2dc.png" width="330" height="370" alt="Денежный перевод через Ариадну" />
+          </article>
+
+          <article class="main-service-card main-service-card--meeting">
+            <div>
+              <h3>Видеосвидание</h3>
+              <p>Общайтесь с близким по видеосвязи! Установите мобильное приложение «Ариадна», чтобы воспользоваться функцией.</p>
+              <a href="./videomeeting.html">Подробнее</a>
+            </div>
+            <img src="./assets/3dc.png" width="602" height="620" alt="Мужчина общается по видеосвязи" />
+          </article>
+        </div>
+      </section>
+
+      <section class="main-app-banner page-container" aria-labelledby="main-app-banner-title">
+        <div class="main-app-banner__content">
+          <h2 id="main-app-banner-title">Скачивайте мобильное приложение «Ариадна» для Android</h2>
+          <p>Установите «Ариадна» на телефон и пользуйтесь видеосвязью и скидками!</p>
+
+          <div class="main-app-banner__features" aria-label="Возможности приложения">
+            <article class="main-app-banner__feature">
+              <img src="./icon/chart.svg" width="40" height="40" alt="" />
+              <h3>Общайтесь дешевле, чем у сотовых операторов</h3>
+            </article>
+            <article class="main-app-banner__feature">
+              <img src="./icon/icon-contact-1.svg" width="40" height="40" alt="" />
+              <h3>Подключайте безлимитный тариф на аудиозвонки</h3>
+            </article>
+            <article class="main-app-banner__feature">
+              <img src="./icon/card.svg" width="40" height="40" alt="" />
+              <h3>Пополняйте логин осуждённого</h3>
+            </article>
+            <article class="main-app-banner__feature">
+              <img src="./icon/icon-contact-2.svg" width="40" height="40" alt="" />
+              <h3>Задавайте вопросы техподдержке</h3>
+            </article>
+          </div>
+
+          <a class="btn btn-primary main-app-banner__button" href="./app.html">Открыть в Google Play</a>
+        </div>
+
+        <img class="main-app-banner__image" src="./assets/main-app-banner.png" width="560" height="620" alt="Мобильное приложение Ариадна для Android" />
+      </section>
+
+      <section class="main-reasons page-container" aria-labelledby="main-reasons-title">
+        <h2 id="main-reasons-title">Почему стоит выбрать «Ариадна»?</h2>
+        <div class="main-reasons-grid">
+          <article class="main-reason-card">
+            <img src="./icon/main2/icon-contact.svg" width="32" height="32" alt="" />
+            <h3>Попробуйте связь бесплатно!</h3>
+            <p>Мы дарим новым пользователям бонусные рубли на первый звонок</p>
+          </article>
+          <article class="main-reason-card">
+            <img src="./icon/main2/icon-contact-1.svg" width="32" height="32" alt="" />
+            <h3>Удобное мобильное приложение</h3>
+            <p>В котором можно общаться по видеосвязи, пополнять счёт осуждённого и писать в поддержку</p>
+          </article>
+          <article class="main-reason-card">
+            <img src="./icon/main2/icon-contact-2.svg" width="32" height="32" alt="" />
+            <h3>Сбрасываем цены на общение</h3>
+            <p>Звонки маме за 0,7 ₽/мин, скидки на аудиовызовы в приложении</p>
+          </article>
+          <article class="main-reason-card">
+            <img src="./icon/main2/icon-contact-3.svg" width="32" height="32" alt="" />
+            <h3>Подключаем безлимит</h3>
+            <p>Общайтесь без ограничений за 333 ₽. Тариф действует 30 дней. Длительность переговоров регулируется ФСИН РФ</p>
+          </article>
+          <article class="main-reason-card main-reason-card--wide">
+            <img src="./icon/main2/icon-contact-4.svg" width="32" height="32" alt="" />
+            <h3>Обеспечиваем безопасность</h3>
+            <p>Система «Ариадна» гарантирует безопасность платежей: средства, зачисленные на личный счёт осуждённого, можно использовать только для звонков на заранее утверждённые номера. Безопасность средств обеспечивается системой и технологиями онлайн-платежей.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="unlimited-section page-container main-unlimited" aria-label="Безлимитный тариф">
+        <div class="unlimited-panel">
+          <h2 class="unlimited-panel__title">
+            <span>Подключите Безлимитный тариф в мобильном приложении</span>
+          </h2>
+          <div class="unlimited-offers" aria-label="Преимущества тарифа">
+            <article class="offer-card">
+              <strong>99 ₽</strong>
+              <del>999 ₽</del>
+              <span>Первый месяц подключения</span>
+            </article>
+            <article class="offer-card">
+              <strong>4 ₽</strong>
+              <del>5 ₽</del>
+              <span>За минуту разговора по видеосвязи</span>
+            </article>
+            <article class="offer-card">
+              <strong>5%</strong>
+              <del>5,5%</del>
+              <span>Комиссия с переводов денежных средств</span>
+            </article>
+            <article class="offer-card">
+              <strong>5%</strong>
+              <span>Скидка на звонки на мобильный телефон</span>
+            </article>
+          </div>
+          <a class="btn btn-primary unlimited-panel__button" href="./unlimited.html">Подробнее о Безлимите</a>
+          <aside class="unlimited-qr">
+            <img src="./icon/qr-main.png" width="302" height="298" alt="QR-код для скачивания приложения Ариадна" />
+          </aside>
+        </div>
+      </section>
+
+      <section class="questions-section page-container main-questions">
+        <div class="questions-panel">
+          <div class="questions-copy">
+            <h2>Возникли сложности<br />с использованием сервиса?</h2>
+            <p>Обратитесь к онлайн-консультантам — они оперативно ответят на все ваши вопросы</p>
+          </div>
+
+          <a class="contact-card contact-card-chat" href="#">
+            <img src="./icon/icon-contact-2.svg" width="40" height="40" alt="" />
+            <h3>Чат мобильного приложения</h3>
+            <p>— раздел «Помощь»</p>
+          </a>
+          <a class="contact-card contact-card-telegram" href="#">
+            <img src="./icon/icon-contact-3.svg" width="40" height="40" alt="" />
+            <h3>Официальный Телеграм</h3>
+          </a>
+          <img class="operator-image" src="./assets/woman.png" width="575" height="450" alt="Оператор службы поддержки Ариадна" />
+          <a class="contact-card contact-card-site" href="#">
+            <img src="./icon/icon-contact.svg" width="40" height="40" alt="" />
+            <h3>Сайт</h3>
+            <p>ариадна.рус</p>
+          </a>
+          <a class="contact-card contact-card-phone" href="tel:88005053712">
+            <img src="./icon/icon-contact-1.svg" width="40" height="40" alt="" />
+            <h3>Телефон</h3>
+            <p>8 (800) 505 37 12</p>
+          </a>
+          <aside class="attention-card">
+            <img src="./icon/mark.svg" width="24" height="24" alt="" />
+            <div>
+              <h3>Обращаем внимание</h3>
+              <p>В круглосуточном режиме работает только телефон. Остальные обращения рассматриваются в рабочее время контакт-центра с 8:00 до 21:00 по красноярскому времени</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <div class="payment-modal" id="payment-modal" hidden>
+      <div class="payment-modal__backdrop" data-close-payment></div>
+      <div class="payment-modal__wrap" role="dialog" aria-modal="true" aria-labelledby="payment-modal-title">
+        <form class="payment-modal__panel" action="./payment.html" method="get" novalidate>
+          <div class="payment-modal__copy">
+            <h2 id="payment-modal-title">Внесение платежа<br />на оплату услуг связи<br />осуждённого</h2>
+            <p>Шаг 1: Поиск дела осужденного</p>
+
+            <div class="payment-modal__errors" id="payment-modal-errors" aria-live="polite" hidden></div>
+
+            <a class="payment-modal__phone" href="tel:88005053712">
+              <img src="./icon/Group-1.svg" width="22" height="22" alt="" />
+              <span>Контакт-центр<br />8 (800) 505 37 12</span>
+            </a>
+          </div>
+
+          <div class="payment-modal__form">
+            <label class="sr-only" for="modal-payment-login">Логин осужденного</label>
+            <input id="modal-payment-login" name="login" type="text" inputmode="numeric" autocomplete="off" placeholder="Логин осужденного" aria-describedby="payment-modal-errors" required />
+
+            <label class="sr-only" for="modal-payment-amount">Сумма платежа</label>
+            <input id="modal-payment-amount" name="amount" type="text" inputmode="numeric" placeholder="Сумма платежа" required />
+
+            <label class="sr-only" for="modal-payment-email">Email для отправки чека</label>
+            <input id="modal-payment-email" name="email" type="email" placeholder="Email для отправки чека" required />
+
+            <label class="payment-modal__check">
+              <input id="modal-payment-captcha" type="checkbox" name="captcha" />
+              <span></span>
+              <span>
+                Я не робот
+                <small>Нажмите,чтобы продолжить</small>
+              </span>
+            </label>
+
+            <button class="payment-modal__submit" type="submit">Перейти к оплате</button>
+          </div>
+        </form>
+
+        <button class="payment-modal__close" type="button" data-close-payment aria-label="Закрыть попап пополнения">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="footer-logo" href="./main.html" aria-label="Ариадна, главная">
+          <img src="./icon/logo-white.svg" width="186" height="108" alt="Ариадна" />
+        </a>
+
+        <nav class="footer-nav footer-nav-primary" aria-label="Услуги">
+          <a href="./main.html">Главная</a>
+          <a href="./videomeeting.html">Видеосвидание</a>
+          <a href="./index.html">Денежные переводы</a>
+          <a href="./app.html">Мобильное приложение</a>
+          <a href="./app.html#app-setup">Инструкция для приложения</a>
+          <a href="./unlimited.html">Безлимитный тариф в приложении «Ариадна»</a>
+        </nav>
+
+        <nav class="footer-nav footer-nav-secondary" aria-label="Информация">
+          <a href="./payment.html">Оплата услуг</a>
+          <a href="./news.html">Информирование</a>
+          <a href="./faq.html">Вопросы и ответы</a>
+          <a href="./docs.html">Документы</a>
+          <a href="./contacts.html">Контакты</a>
+        </nav>
+
+        <div class="footer-contact">
+          <a class="footer-phone" href="tel:88005053712">8 (800) 505 37 12</a>
+          <a class="footer-mail" href="mailto:info@aripay.ru">info@aripay.ru</a>
+          <p>© ООО «А-Плюс», 2026. Все права защищены.</p>
+          <p>660075, г. Красноярск, ул. Красной Гвардии, дом 24 помещение 7, кабинет 300/5</p>
+          <a class="privacy-link" href="#">Политика в отношении обработки персональных данных</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

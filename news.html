@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Информирование — Ариадна</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="news-body">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="logo-link" href="./main.html" aria-label="Ариадна, главная">
+          <img src="./icon/logo.svg" width="180" height="117" alt="Ариадна" />
+        </a>
+
+        <div class="header-content">
+          <div class="header-top" aria-label="Контакты">
+            <a class="top-link" href="#">
+              <img src="./icon/Group.svg" width="20" height="20" alt="" />
+              <span>Личный кабинет</span>
+            </a>
+            <a class="top-link" href="tel:88005053712">
+              <img src="./icon/Group-1.svg" width="20" height="20" alt="" />
+              <span>8 (800) 505 37 12</span>
+            </a>
+            <a class="top-link" href="mailto:info@aripay.ru">
+              <img src="./icon/mail.svg" width="20" height="20" alt="" />
+              <span>info@aripay.ru</span>
+            </a>
+          </div>
+
+          <div class="header-bottom">
+            <nav class="main-nav" aria-label="Основная навигация">
+              <a href="./main.html">Главная</a>
+              <a href="./payment.html">Оплата услуг</a>
+              <a class="is-active" href="./news.html">Информирование</a>
+              <a href="./faq.html">Вопросы и ответы</a>
+              <a href="./docs.html">Документы</a>
+              <a href="./contacts.html">Контакты</a>
+            </nav>
+            <div class="header-actions">
+              <form class="header-search" role="search">
+                <label class="sr-only" for="header-search">Поиск по сайту</label>
+                <img src="./icon/Label.svg" width="24" height="24" alt="" />
+                <input id="header-search" name="q" type="search" placeholder="Поиск по сайту" />
+              </form>
+              <a class="pay-button" href="./payment.html">Оплатить связь</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="news-page">
+      <section class="news-section page-container">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+          <a href="./main.html">Главная</a>
+          <span>/</span>
+          <span>Информирование</span>
+        </nav>
+
+        <h1>Информирование</h1>
+
+        <div class="news-grid" aria-label="Новости">
+          <article
+            class="news-card"
+            data-news-card
+            data-news-title="Изменение стоимости звонков в Иркутской, Кемеровской областях и в Забайкальском крае"
+            data-news-date="18.05.2026"
+            data-news-intro="Уважаемые клиенты!"
+            data-news-text="С 29.05.2026 в учреждениях на территории Иркутской, Кемеровской областях и Забайкальском крае стоимость звонков на номера сотовых операторов РФ составит 3,5 рубля за минуту разговора."
+          >
+            <h2>Изменение стоимости звонков в Иркутской, Кемеровской областях и в Забайкальском крае</h2>
+            <p>С 29.05.2026 в учреждениях на территории Иркутской, Кемеровской областях и Забайкальском крае стоимость звонков на номера сотовых операторов РФ составит 3,5 рубля за минуту разговора.</p>
+            <div class="news-card__footer">
+              <button type="button" data-open-news>Подробнее</button>
+              <time datetime="2026-05-18">18.05.2026</time>
+            </div>
+          </article>
+
+          <article
+            class="news-card"
+            data-news-card
+            data-news-title="Изменение стоимости звонков в Калининградской области"
+            data-news-date="18.05.2026"
+            data-news-intro="Уважаемые клиенты!"
+            data-news-text="С 08.06.2026 в учреждениях на территории Калининградской области стоимость звонков на номера сотовых операторов РФ составит 3 рубля за минуту разговора."
+          >
+            <h2>Изменение стоимости звонков в Калининградской области</h2>
+            <p>С 08.06.2026 в учреждениях на территории Калининградской области стоимость звонков на номера сотовых операторов РФ составит 3 рубля за минуту разговора.</p>
+            <div class="news-card__footer">
+              <button type="button" data-open-news>Подробнее</button>
+              <time datetime="2026-05-18">18.05.2026</time>
+            </div>
+          </article>
+
+          <article
+            class="news-card"
+            data-news-card
+            data-news-title="Изменение стоимости звонков в Магаданской области"
+            data-news-date="30.03.2026"
+            data-news-intro="Уважаемые клиенты!"
+            data-news-text="С 10 апреля 2026 года стоимость звонков на номера сотовых операторов на территории Магаданской области составит 3 рубля за минуту разговора."
+          >
+            <h2>Изменение стоимости звонков в Магаданской области</h2>
+            <p>С 10 апреля 2026 года стоимость звонков на номера сотовых операторов на территории Магаданской области составит 3 рубля за минуту разговора.</p>
+            <div class="news-card__footer">
+              <button type="button" data-open-news>Подробнее</button>
+              <time datetime="2026-03-30">30.03.2026</time>
+            </div>
+          </article>
+
+          <article
+            class="news-card"
+            data-news-card
+            data-news-title="Изменение цен на услуги связи"
+            data-news-date="15.08.2025"
+            data-news-intro="Уважаемые клиенты!"
+            data-news-text="С 1 апреля вступают в силу изменения в ценовой политике оператора «А-Плюс». Ознакомиться с актуальной стоимостью услуг вы можете в разделе «Документы»."
+          >
+            <h2>Изменение цен на услуги связи</h2>
+            <p>С 1 апреля вступают в силу изменения в ценовой политике оператора «А-Плюс». Ознакомиться с актуальной стоимостью услуг вы можете в разделе «Документы».</p>
+            <div class="news-card__footer">
+              <button type="button" data-open-news>Подробнее</button>
+              <time datetime="2025-08-15">15.08.2025</time>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <div class="news-modal" id="news-modal" hidden>
+      <div class="news-modal__backdrop" data-close-news></div>
+      <div class="news-modal__wrap">
+        <div class="news-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="news-modal-title">
+          <article class="news-modal__article">
+            <h2 id="news-modal-title"></h2>
+            <time id="news-modal-date"></time>
+            <strong id="news-modal-intro"></strong>
+            <p id="news-modal-text"></p>
+          </article>
+
+          <aside class="news-modal__support" aria-label="Помощь по услугам">
+            <div class="news-modal__support-copy">
+              <h3>Есть вопросы об услугах оператора «А-Плюс»?</h3>
+              <p>Задайте их нашим специалистам в онлайн-чате на сайте ариадна.рус, а также по телефону: <a href="tel:88005053712">8 (800) 505 37 12</a>.</p>
+            </div>
+            <img src="./assets/woman.png" width="575" height="450" alt="Специалист поддержки Ариадна" />
+          </aside>
+        </div>
+
+        <button class="news-modal__close" type="button" aria-label="Закрыть новость" data-close-news>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="footer-logo" href="./main.html" aria-label="Ариадна, главная">
+          <img src="./icon/logo-white.svg" width="186" height="108" alt="Ариадна" />
+        </a>
+
+        <nav class="footer-nav footer-nav-primary" aria-label="Услуги">
+          <a href="./main.html">Главная</a>
+          <a href="./videomeeting.html">Видеосвидание</a>
+          <a href="./index.html">Денежные переводы</a>
+          <a href="./app.html">Мобильное приложение</a>
+          <a href="./app.html#app-setup">Инструкция для приложения</a>
+          <a href="./unlimited.html">Безлимитный тариф в приложении «Ариадна»</a>
+        </nav>
+
+        <nav class="footer-nav footer-nav-secondary" aria-label="Информация">
+          <a href="./payment.html">Оплата услуг</a>
+          <a href="./news.html">Информирование</a>
+          <a href="./faq.html">Вопросы и ответы</a>
+          <a href="./docs.html">Документы</a>
+          <a href="./contacts.html">Контакты</a>
+        </nav>
+
+        <div class="footer-contact">
+          <a class="footer-phone" href="tel:88005053712">8 (800) 505 37 12</a>
+          <a class="footer-mail" href="mailto:info@aripay.ru">info@aripay.ru</a>
+          <p>© ООО «А-Плюс», 2026. Все права защищены.</p>
+          <p>660075, г. Красноярск, ул. Красной Гвардии, дом 24 помещение 7, кабинет 300/5</p>
+          <a class="privacy-link" href="#">Политика в отношении обработки персональных данных</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

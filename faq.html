@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Вопросы и ответы — Ариадна</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="faq-body">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="logo-link" href="./main.html" aria-label="Ариадна, главная">
+          <img src="./icon/logo.svg" width="180" height="117" alt="Ариадна" />
+        </a>
+
+        <div class="header-content">
+          <div class="header-top" aria-label="Контакты">
+            <a class="top-link" href="#">
+              <img src="./icon/Group.svg" width="20" height="20" alt="" />
+              <span>Личный кабинет</span>
+            </a>
+            <a class="top-link" href="tel:88005053712">
+              <img src="./icon/Group-1.svg" width="20" height="20" alt="" />
+              <span>8 (800) 505 37 12</span>
+            </a>
+            <a class="top-link" href="mailto:info@aripay.ru">
+              <img src="./icon/mail.svg" width="20" height="20" alt="" />
+              <span>info@aripay.ru</span>
+            </a>
+          </div>
+
+          <div class="header-bottom">
+            <nav class="main-nav" aria-label="Основная навигация">
+              <a href="./main.html">Главная</a>
+              <a href="./payment.html">Оплата услуг</a>
+              <a href="./news.html">Информирование</a>
+              <a class="is-active" href="./faq.html">Вопросы и ответы</a>
+              <a href="./docs.html">Документы</a>
+              <a href="./contacts.html">Контакты</a>
+            </nav>
+            <div class="header-actions">
+              <form class="header-search" role="search">
+                <label class="sr-only" for="header-search">Поиск по сайту</label>
+                <img src="./icon/Label.svg" width="24" height="24" alt="" />
+                <input id="header-search" name="q" type="search" placeholder="Поиск по сайту" />
+              </form>
+              <a class="pay-button" href="./payment.html">Оплатить связь</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="faq-page">
+      <section class="faq-layout page-container" aria-labelledby="faq-title">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+          <a href="./main.html">Главная</a>
+          <span>/</span>
+          <span>Вопросы и ответы</span>
+        </nav>
+
+        <h1 id="faq-title">Вопросы и ответы</h1>
+
+        <div class="faq-shell">
+          <aside class="faq-tabs" aria-label="Разделы вопросов">
+            <button class="faq-tab" type="button" data-faq-tab="about">О связи «Ариадна»</button>
+            <button class="faq-tab" type="button" data-faq-tab="login">Логин осуждённого</button>
+            <button class="faq-tab" type="button" data-faq-tab="app">Мобильное приложение «Ариадна»</button>
+            <button class="faq-tab" type="button" data-faq-tab="video">Видеосвязь «Ариадна»</button>
+            <button class="faq-tab" type="button" data-faq-tab="unlimited">Безлимитный тариф в приложении «Ариадна»</button>
+            <button class="faq-tab" type="button" data-faq-tab="payment">Оплата связи «Ариадна»</button>
+            <button class="faq-tab" type="button" data-faq-tab="transfer">Денежные переводы</button>
+            <button class="faq-tab" type="button" data-faq-tab="other">Прочее</button>
+          </aside>
+
+          <section class="faq-panel" aria-live="polite" aria-labelledby="faq-panel-title">
+            <h2 id="faq-panel-title"></h2>
+            <div class="faq-accordion" id="faq-accordion"></div>
+            <aside class="faq-help" id="faq-help" hidden>
+              <span class="faq-help__icon" aria-hidden="true">?</span>
+              <div>
+                <h3>Не нашли ответа на свой вопрос? Свяжитесь с нами!</h3>
+                <p>
+                  Мы в круглосуточном режиме отвечаем на вопросы по телефону 8 800 505 37 12. Кроме того, с 8:00 до 21:00 по красноярскому времени мы консультируем пользователей в чатах <a href="#">мобильного приложения «Ариадна»</a> (раздел «Помощь») и на сайте <a href="#">ариадна.рус</a> и по электронной почте <a href="mailto:info@aripay.ru">info@aripay.ru</a>.
+                </p>
+              </div>
+            </aside>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="footer-logo" href="./main.html" aria-label="Ариадна, главная">
+          <img src="./icon/logo-white.svg" width="186" height="108" alt="Ариадна" />
+        </a>
+
+        <nav class="footer-nav footer-nav-primary" aria-label="Услуги">
+          <a href="./main.html">Главная</a>
+          <a href="./videomeeting.html">Видеосвидание</a>
+          <a href="./index.html">Денежные переводы</a>
+          <a href="./app.html">Мобильное приложение</a>
+          <a href="./app.html#app-setup">Инструкция для приложения</a>
+          <a href="./unlimited.html">Безлимитный тариф в приложении «Ариадна»</a>
+        </nav>
+
+        <nav class="footer-nav footer-nav-secondary" aria-label="Информация">
+          <a href="./payment.html">Оплата услуг</a>
+          <a href="./news.html">Информирование</a>
+          <a href="./faq.html">Вопросы и ответы</a>
+          <a href="./docs.html">Документы</a>
+          <a href="./contacts.html">Контакты</a>
+        </nav>
+
+        <div class="footer-contact">
+          <a class="footer-phone" href="tel:88005053712">8 (800) 505 37 12</a>
+          <a class="footer-mail" href="mailto:info@aripay.ru">info@aripay.ru</a>
+          <p>© ООО «А-Плюс», 2026. Все права защищены.</p>
+          <p>660075, г. Красноярск, ул. Красной Гвардии, дом 24 помещение 7, кабинет 300/5</p>
+          <a class="privacy-link" href="#">Политика в отношении обработки персональных данных</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
