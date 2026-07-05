@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Видеосвидание — Ариадна</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=mobile-menu" />
   </head>
   <body class="video-body">
     <header class="site-header">
@@ -48,6 +48,12 @@
             </div>
           </div>
         </div>
+
+        <button class="mobile-menu-button" type="button" aria-label="Открыть меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </header>
 
@@ -82,7 +88,7 @@
               <h3>Убедитесь, что вы установили на смартфон мобильное приложение «Ариадна» в Google Play.</h3>
               <p>Не забудьте в настройках приложения отметить галочкой все разрешения</p>
             </div>
-            <img src="./screens/img.jpg" width="135" height="268" alt="Экран настроек приложения Ариадна" />
+            <img src="./assets/sc1.jpg" width="135" height="268" alt="Экран настроек приложения Ариадна" />
           </article>
 
           <article class="step-card">
@@ -97,7 +103,7 @@
               <h3>Проверьте, достаточно ли средств на счёту осуждённого. При необходимости пополните его счёт</h3>
               <a href="#">Узнать способы оплаты</a>
             </div>
-            <img src="./screens/img-1.jpg" width="135" height="268" alt="Экран контакта в приложении Ариадна" />
+            <img src="./assets/sc3.jpg" width="135" height="268" alt="Экран контакта в приложении Ариадна" />
           </article>
 
           <article class="step-card step-card--with-screen">
@@ -106,7 +112,7 @@
               <h3>Ожидайте входящего вызова</h3>
               <p>Нажмите зелёную кнопку, чтобы оставаться в сети</p>
             </div>
-            <img src="./screens/img-2.jpg" width="135" height="268" alt="Экран входящего вызова" />
+            <img src="./assets/sc4.jpg" width="135" height="268" alt="Экран входящего вызова" />
           </article>
 
           <article class="step-card step-card--with-screen">
@@ -115,7 +121,7 @@
               <h3>Перед сеансом видеосвязи советуем проверить качество соединения</h3>
               <p>Для этого сделайте пробный звонок в наш контакт-центр из приложения. Функция доступна в разделе «Поддержка».</p>
             </div>
-            <img src="./screens/img-3.jpg" width="135" height="268" alt="Экран поддержки в приложении Ариадна" />
+            <img src="./assets/sc5.jpg" width="135" height="268" alt="Экран поддержки в приложении Ариадна" />
           </article>
         </div>
       </section>
@@ -144,13 +150,27 @@
             <p>Необходимо обеспечить доступ к видеокамере, микрофону, памяти смартфона. Убедитесь, что функции «Отключение блокировки экрана», «Запуск активных сервисов», «Отключение спящего режима», «Показ уведомлений», «Изменение настроек аудио» и др. активны</p>
           </article>
         </div>
+        <div class="reason-controls" aria-hidden="true">
+          <button class="reason-control" type="button" tabindex="-1">
+            <span></span>
+          </button>
+          <div class="reason-dots">
+            <span class="is-active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <button class="reason-control reason-control--next" type="button" tabindex="-1">
+            <span></span>
+          </button>
+        </div>
       </section>
 
       <section class="questions-section page-container">
         <div class="questions-panel">
           <div class="questions-copy">
-            <h2>Возникли сложности<br />с использованием сервиса?</h2>
-            <p>Обратитесь к онлайн-консультантам — они оперативно ответят на все ваши вопросы</p>
+            <h2>Остались вопросы ?</h2>
+            <p>Выберите удобный способ связи и мы проконсультируем по любым вопросам</p>
           </div>
 
           <div class="contact-card contact-card-chat">
@@ -199,37 +219,38 @@
 
     <footer class="site-footer">
       <div class="footer-inner">
-        <a class="footer-logo" href="./main.html" aria-label="Ариадна, главная">
-          <img src="./icon/logo-white.svg" width="186" height="108" alt="Ариадна" />
-        </a>
-
-        <nav class="footer-nav footer-nav-primary" aria-label="Услуги">
+        <div class="footer-brand">
+          <a class="footer-logo" href="./main.html" aria-label="Ариадна, главная">
+            <img src="./icon/logo-white.svg" width="186" height="108" alt="Ариадна" />
+          </a>
+          <p>660075, г. Красноярск, ул. Красной Гвардии, дом 24 помещение 7, кабинет 300/5</p>
+          <p>© ООО «А-Плюс», 2026. Все права защищены.</p>
+          <a class="privacy-link" href="#">Политика в отношении обработки персональных данных</a>
+        </div>
+        <nav class="footer-nav footer-nav-primary" aria-label="Основные разделы">
           <a href="./main.html">Главная</a>
-          <a href="#">Видеосвидание</a>
+          <a href="./payment.html">Оплата услуг</a>
+          <a href="./faq.html">Вопросы и ответы</a>
+        </nav>
+        <nav class="footer-nav footer-nav-secondary" aria-label="Информация">
+          <a href="./docs.html">Документы</a>
+          <a href="./contacts.html">Контакты</a>
+          <a href="./news.html">Информирование</a>
+        </nav>
+        <nav class="footer-nav footer-nav-services" aria-label="Услуги">
+          <a href="./videomeeting.html">Видеосвидание</a>
           <a href="./index.html">Денежные переводы</a>
           <a href="./app.html">Мобильное приложение</a>
           <a href="./app.html#app-setup">Инструкция для приложения</a>
           <a href="./unlimited.html">Безлимитный тариф в приложении «Ариадна»</a>
         </nav>
-
-        <nav class="footer-nav footer-nav-secondary" aria-label="Информация">
-          <a href="./payment.html">Оплата услуг</a>
-          <a href="./news.html">Информирование</a>
-          <a href="./faq.html">Вопросы и ответы</a>
-          <a href="./docs.html">Документы</a>
-          <a href="./contacts.html">Контакты</a>
-        </nav>
-
         <div class="footer-contact">
           <a class="footer-phone" href="tel:88005053712">8 (800) 505 37 12</a>
           <a class="footer-mail" href="mailto:info@aripay.ru">info@aripay.ru</a>
-          <p>© ООО «А-Плюс», 2026. Все права защищены.</p>
-          <p>660075, г. Красноярск, ул. Красной Гвардии, дом 24 помещение 7, кабинет 300/5</p>
-          <a class="privacy-link" href="#">Политика в отношении обработки персональных данных</a>
         </div>
       </div>
     </footer>
 
-    <script src="./script.js"></script>
+    <script src="./script.js?v=mobile-menu"></script>
   </body>
 </html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Контакты — Ариадна</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=mobile-menu" />
   </head>
   <body class="contacts-body">
     <header class="site-header">
@@ -48,6 +48,8 @@
             </div>
           </div>
         </div>
+
+        <a class="mobile-header-phone" href="tel:88005053712" aria-label="Позвонить 8 (800) 505 37 12">8 (800) 505 37 12</a>
       </div>
     </header>
 
@@ -77,7 +79,7 @@
             </article>
             <article class="contacts-detail-card">
               <h2>Генеральный директор</h2>
-              <p>Молдаванов Алексей Валерьевич, действует на основании Устава</p>
+              <p>Ретриченко Леонид Викторович, действует на основании Устава</p>
             </article>
             <article class="contacts-detail-card">
               <h2>Телефон</h2>
@@ -98,27 +100,27 @@
             </article>
             <article class="contacts-detail-card">
               <h2>Банк</h2>
-              <p>ТБанк (акционерное общество)</p>
+              <p>Банк ВТБ (публичное акционерное общество)</p>
             </article>
             <article class="contacts-detail-card">
               <h2>Корреспондентский счет</h2>
-              <p>30101810145250000974</p>
+              <p>30101810145250000411</p>
             </article>
             <article class="contacts-detail-card">
               <h2>БИК</h2>
-              <p>044525974</p>
+              <p>044525411</p>
             </article>
             <article class="contacts-detail-card">
               <h2>ИНН банка</h2>
-              <p>7710140679</p>
+              <p>7702070139</p>
             </article>
             <article class="contacts-detail-card">
               <h2>КПП банка</h2>
-              <p>771301001</p>
+              <p>770943002</p>
             </article>
             <article class="contacts-detail-card">
               <h2>Расчетный счет</h2>
-              <p>4070281010001948170</p>
+              <p>40702810712790002916</p>
             </article>
             <article class="contacts-detail-card">
               <h2>ОГРН</h2>
@@ -147,37 +149,54 @@
 
     <footer class="site-footer">
       <div class="footer-inner">
-        <a class="footer-logo" href="./main.html" aria-label="Ариадна, главная">
-          <img src="./icon/logo-white.svg" width="186" height="108" alt="Ариадна" />
-        </a>
-
-        <nav class="footer-nav footer-nav-primary" aria-label="Услуги">
+        <div class="footer-brand">
+          <a class="footer-logo" href="./main.html" aria-label="Ариадна, главная">
+            <img src="./icon/logo-white.svg" width="186" height="108" alt="Ариадна" />
+          </a>
+          <p>660075, г. Красноярск, ул. Красной Гвардии, дом 24 помещение 7, кабинет 300/5</p>
+          <p>© ООО «А-Плюс», 2026. Все права защищены.</p>
+          <a class="privacy-link" href="#">Политика в отношении обработки персональных данных</a>
+        </div>
+        <nav class="footer-nav footer-nav-primary" aria-label="Основные разделы">
           <a href="./main.html">Главная</a>
+          <a href="./payment.html">Оплата услуг</a>
+          <a href="./faq.html">Вопросы и ответы</a>
+        </nav>
+        <nav class="footer-nav footer-nav-secondary" aria-label="Информация">
+          <a href="./docs.html">Документы</a>
+          <a href="./contacts.html">Контакты</a>
+          <a href="./news.html">Информирование</a>
+        </nav>
+        <nav class="footer-nav footer-nav-services" aria-label="Услуги">
           <a href="./videomeeting.html">Видеосвидание</a>
           <a href="./index.html">Денежные переводы</a>
           <a href="./app.html">Мобильное приложение</a>
           <a href="./app.html#app-setup">Инструкция для приложения</a>
           <a href="./unlimited.html">Безлимитный тариф в приложении «Ариадна»</a>
         </nav>
-
-        <nav class="footer-nav footer-nav-secondary" aria-label="Информация">
-          <a href="./payment.html">Оплата услуг</a>
-          <a href="./news.html">Информирование</a>
-          <a href="./faq.html">Вопросы и ответы</a>
-          <a href="./docs.html">Документы</a>
-          <a href="./contacts.html">Контакты</a>
-        </nav>
-
         <div class="footer-contact">
           <a class="footer-phone" href="tel:88005053712">8 (800) 505 37 12</a>
           <a class="footer-mail" href="mailto:info@aripay.ru">info@aripay.ru</a>
-          <p>© ООО «А-Плюс», 2026. Все права защищены.</p>
-          <p>660075, г. Красноярск, ул. Красной Гвардии, дом 24 помещение 7, кабинет 300/5</p>
-          <a class="privacy-link" href="#">Политика в отношении обработки персональных данных</a>
         </div>
+        <nav class="contacts-footer-mobile-nav" aria-label="Разделы сайта">
+          <div>
+            <a href="./payment.html">Оплата услуг</a>
+            <a href="./faq.html">Вопросы и ответы</a>
+            <a href="./docs.html">Документы</a>
+            <a href="./contacts.html">Контакты</a>
+            <a href="./news.html">Информирование</a>
+          </div>
+          <div>
+            <a href="./main.html">Главная</a>
+            <a href="./videomeeting.html">Видеосвидание</a>
+            <a href="./index.html">Денежные переводы</a>
+            <a href="./app.html#app-setup">Инструкция<br />для приложения</a>
+            <a href="./unlimited.html">Безлимитный тариф<br />в приложении «Ариадна»</a>
+          </div>
+        </nav>
       </div>
     </footer>
 
-    <script src="./script.js"></script>
+    <script src="./script.js?v=mobile-menu"></script>
   </body>
 </html>

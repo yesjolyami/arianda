@@ -47,6 +47,19 @@ const searchItems = [
 const canonicalQuery = "Мобильное приложение";
 const searchForms = document.querySelectorAll('form[role="search"]');
 
+const mobileMenuLinks = [
+  { title: "Главная", href: "./main.html", match: ["main.html", ""] },
+  { title: "Видеосвидание", href: "./videomeeting.html", match: ["videomeeting.html"] },
+  { title: "Денежные переводы", href: "./index.html", match: ["index.html"] },
+  { title: "Оплата услуг", href: "./payment.html", match: ["payment.html"] },
+  { title: "Вопросы и ответы", href: "./faq.html", match: ["faq.html"] },
+  { title: "Информирование", href: "./news.html", match: ["news.html"] },
+  { title: "Документы", href: "./docs.html", match: ["docs.html"] },
+  { title: "Контакты", href: "./contacts.html", match: ["contacts.html"] },
+  { title: "Инструкция для приложения", href: "./app.html#app-setup", match: ["app.html", "realme.html", "huawei.html", "samsung.html"] },
+  { title: "Безлимитный тариф в приложении «Ариадна»", href: "./unlimited.html", match: ["unlimited.html"] },
+];
+
 function submitSearch(form) {
   const input = form.querySelector('input[name="q"]');
   const query = (input?.value || "").trim();
@@ -55,6 +68,151 @@ function submitSearch(form) {
   if (query) params.set("q", query);
 
   window.location.href = `./search.html${params.toString() ? `?${params.toString()}` : ""}`;
+}
+
+function getCurrentPageName() {
+  const path = window.location.pathname.split("/").pop();
+  return path || "main.html";
+}
+
+function createIconLink(className, href, icon, text, ariaLabel) {
+  const link = document.createElement("a");
+  link.className = className;
+  link.href = href;
+  if (ariaLabel) link.setAttribute("aria-label", ariaLabel);
+
+  const image = document.createElement("img");
+  image.src = icon;
+  image.width = 20;
+  image.height = 20;
+  image.alt = "";
+  link.append(image);
+
+  const span = document.createElement("span");
+  span.textContent = text;
+  link.append(span);
+
+  return link;
+}
+
+function initMobileMenu() {
+  const header = document.querySelector(".site-header");
+  const headerInner = document.querySelector(".site-header__inner");
+  const logo = document.querySelector(".logo-link");
+  if (!header || !headerInner || !logo) return;
+
+  let openButton = headerInner.querySelector(".mobile-menu-button");
+  if (!openButton) {
+    openButton = document.createElement("button");
+    openButton.className = "mobile-menu-button";
+    openButton.type = "button";
+    openButton.innerHTML = "<span></span><span></span><span></span>";
+    headerInner.append(openButton);
+  }
+
+  const menuId = "mobile-menu";
+  openButton.setAttribute("aria-label", "Открыть меню");
+  openButton.setAttribute("aria-controls", menuId);
+  openButton.setAttribute("aria-expanded", "false");
+
+  const menu = document.createElement("div");
+  menu.className = "mobile-menu";
+  menu.id = menuId;
+  menu.hidden = true;
+
+  const menuHeader = document.createElement("div");
+  menuHeader.className = "mobile-menu__header";
+  const menuLogo = logo.cloneNode(true);
+  menuLogo.classList.add("mobile-menu__logo");
+
+  const closeButton = document.createElement("button");
+  closeButton.className = "mobile-menu__close";
+  closeButton.type = "button";
+  closeButton.setAttribute("aria-label", "Закрыть меню");
+  closeButton.innerHTML = "<span></span><span></span>";
+
+  menuHeader.append(menuLogo, closeButton);
+
+  const content = document.createElement("div");
+  content.className = "mobile-menu__content";
+
+  const searchForm = document.createElement("form");
+  searchForm.className = "mobile-menu__search";
+  searchForm.setAttribute("role", "search");
+  searchForm.innerHTML = `
+    <label class="sr-only" for="mobile-menu-search-input">Поиск по сайту</label>
+    <input id="mobile-menu-search-input" name="q" type="search" placeholder="Поиск по сайту" />
+    <button type="submit" aria-label="Найти">
+      <img src="./icon/Label.svg" width="24" height="24" alt="" />
+    </button>
+  `;
+
+  const nav = document.createElement("nav");
+  nav.className = "mobile-menu__nav";
+  nav.setAttribute("aria-label", "Мобильная навигация");
+
+  const currentPage = getCurrentPageName();
+  mobileMenuLinks.forEach((item) => {
+    const link = document.createElement("a");
+    link.href = item.href;
+    link.textContent = item.title;
+    if (item.match.includes(currentPage)) {
+      link.classList.add("is-active");
+      link.setAttribute("aria-current", "page");
+    }
+    nav.append(link);
+  });
+
+  const contacts = document.createElement("div");
+  contacts.className = "mobile-menu__contacts";
+  contacts.append(
+    createIconLink("mobile-menu__contact", "#", "./icon/Group.svg", "Личный кабинет"),
+    createIconLink("mobile-menu__contact", "tel:88005053712", "./icon/Group-1.svg", "8 (800) 505 37 12", "Позвонить 8 (800) 505 37 12"),
+    createIconLink("mobile-menu__contact", "mailto:info@aripay.ru", "./icon/mail.svg", "info@aripay.ru", "Написать на info@aripay.ru")
+  );
+
+  const payLink = document.createElement("a");
+  payLink.className = "mobile-menu__pay";
+  payLink.href = "./payment.html";
+  payLink.textContent = "Оплатить связь";
+
+  content.append(searchForm, nav, contacts, payLink);
+  menu.append(menuHeader, content);
+  header.after(menu);
+
+  const open = () => {
+    menu.hidden = false;
+    document.body.classList.add("is-mobile-menu-open");
+    openButton.setAttribute("aria-expanded", "true");
+    window.requestAnimationFrame(() => closeButton.focus());
+  };
+
+  const close = () => {
+    menu.hidden = true;
+    document.body.classList.remove("is-mobile-menu-open");
+    openButton.setAttribute("aria-expanded", "false");
+  };
+
+  openButton.addEventListener("click", open);
+  closeButton.addEventListener("click", close);
+  nav.addEventListener("click", (event) => {
+    if (event.target.closest("a")) close();
+  });
+  payLink.addEventListener("click", close);
+
+  searchForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    submitSearch(searchForm);
+  });
+  bindSearchFormState(searchForm);
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !menu.hidden) close();
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 760 && !menu.hidden) close();
+  });
 }
 
 function normalize(value) {
@@ -230,6 +388,7 @@ function initQrModal() {
 
 function initNewsModal() {
   const modal = document.querySelector("#news-modal");
+  const modalWrap = modal?.querySelector(".news-modal__wrap");
   const openButtons = document.querySelectorAll("[data-open-news]");
   const closeButtons = modal?.querySelectorAll("[data-close-news]");
   const title = modal?.querySelector("#news-modal-title");
@@ -237,13 +396,33 @@ function initNewsModal() {
   const intro = modal?.querySelector("#news-modal-intro");
   const text = modal?.querySelector("#news-modal-text");
 
-  if (!modal || !openButtons.length || !title || !date || !intro || !text) return;
+  if (!modal || !modalWrap || !openButtons.length || !title || !date || !intro || !text) return;
 
   let activeButton = null;
+  let activeCard = null;
+
+  const updateModalPosition = () => {
+    if (!activeCard || modal.hidden) return;
+
+    if (window.innerWidth <= 760) {
+      modal.style.setProperty("--news-modal-top", "24px");
+      return;
+    }
+
+    const wrapHeight = modalWrap.offsetHeight;
+    const cardRect = activeCard.getBoundingClientRect();
+    const viewportPadding = 40;
+    const desiredTop = cardRect.top + cardRect.height / 2 - wrapHeight / 2;
+    const maxTop = Math.max(viewportPadding, window.innerHeight - wrapHeight - viewportPadding);
+    const top = Math.min(Math.max(desiredTop, viewportPadding), maxTop);
+
+    modal.style.setProperty("--news-modal-top", `${Math.round(top)}px`);
+  };
 
   const close = () => {
     modal.hidden = true;
     document.body.classList.remove("is-news-open");
+    activeCard = null;
     activeButton?.focus();
   };
 
@@ -256,9 +435,12 @@ function initNewsModal() {
     intro.textContent = card.dataset.newsIntro || "";
     text.textContent = card.dataset.newsText || "";
     activeButton = button;
+    activeCard = card;
 
     modal.hidden = false;
     document.body.classList.add("is-news-open");
+    modal.style.setProperty("--news-modal-top", window.innerWidth <= 760 ? "24px" : "72px");
+    requestAnimationFrame(updateModalPosition);
     closeButtons?.[closeButtons.length - 1]?.focus();
   };
 
@@ -273,6 +455,8 @@ function initNewsModal() {
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && !modal.hidden) close();
   });
+
+  window.addEventListener("resize", updateModalPosition);
 }
 
 function initPaymentModal() {
@@ -792,6 +976,8 @@ function initMainHeroSlider() {
   next?.addEventListener("click", () => showSlide(activeIndex + 1));
   showSlide(activeIndex);
 }
+
+initMobileMenu();
 
 searchForms.forEach((form) => {
   bindSearchFormState(form);

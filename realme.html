@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Инструкция для Realme — Ариадна</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=mobile-menu" />
   </head>
   <body class="instruction-body">
     <header class="site-header">
@@ -48,6 +48,8 @@
             </div>
           </div>
         </div>
+
+        <a class="mobile-header-phone" href="tel:88005053712" aria-label="Позвонить 8 (800) 505 37 12">8 (800) 505 37 12</a>
       </div>
     </header>
 
@@ -69,26 +71,31 @@
         <div class="instruction-steps">
           <article class="instruction-step-card">
             <h2><span>1</span>Зайти в настройки телефона и выбрать раздел «Приложения»</h2>
+            <p>Не забудьте в настройках приложения отметить галочкой все разрешения.</p>
             <img src="./assets/realme/images.png" width="936" height="1892" alt="Настройки Realme, выбран раздел Приложения" />
           </article>
 
           <article class="instruction-step-card">
             <h2><span>2</span>Затем нажать на «Ариадна»</h2>
+            <p>Откройте карточку приложения, чтобы перейти к разрешениям и уведомлениям.</p>
             <img src="./assets/realme/images-1.png" width="936" height="1892" alt="Управление приложениями Realme, выбрано приложение Ариадна" />
           </article>
 
           <article class="instruction-step-card">
             <h2><span>3</span>Выдайте «Разрешения»</h2>
+            <p>Разрешите приложению доступ к необходимым функциям устройства для стабильной работы.</p>
             <img src="./assets/realme/images-2.png" width="936" height="1892" alt="Экран о приложении Ариадна на Realme" />
           </article>
 
           <article class="instruction-step-card instruction-step-card--wide">
             <h2><span>4</span>Разрешите уведомления для приложения</h2>
+            <p>Включите уведомления, чтобы видеть входящие вызовы и сервисные оповещения.</p>
             <img src="./assets/realme/images-3.png" width="1920" height="1892" alt="Экраны уведомлений приложения Ариадна на Realme" />
           </article>
 
           <article class="instruction-step-card">
             <h2><span>5</span>Откройте пункт «Использование батареи» и выдайте разрешения для «Приоритетное выполнение», «Работа в фоновом режиме», «Автоматический запуск»</h2>
+            <p>Снимите ограничения батареи, чтобы приложение корректно работало в фоновом режиме.</p>
             <img src="./assets/realme/images-4.png" width="936" height="1892" alt="Настройки использования батареи приложения Ариадна на Realme" />
           </article>
         </div>
@@ -97,37 +104,54 @@
 
     <footer class="site-footer">
       <div class="footer-inner">
-        <a class="footer-logo" href="./main.html" aria-label="Ариадна, главная">
-          <img src="./icon/logo-white.svg" width="186" height="108" alt="Ариадна" />
-        </a>
-
-        <nav class="footer-nav footer-nav-primary" aria-label="Услуги">
+        <div class="footer-brand">
+          <a class="footer-logo" href="./main.html" aria-label="Ариадна, главная">
+            <img src="./icon/logo-white.svg" width="186" height="108" alt="Ариадна" />
+          </a>
+          <p>660075, г. Красноярск, ул. Красной Гвардии, дом 24 помещение 7, кабинет 300/5</p>
+          <p>© ООО «А-Плюс», 2026. Все права защищены.</p>
+          <a class="privacy-link" href="#">Политика в отношении обработки персональных данных</a>
+        </div>
+        <nav class="footer-nav footer-nav-primary" aria-label="Основные разделы">
           <a href="./main.html">Главная</a>
+          <a href="./payment.html">Оплата услуг</a>
+          <a href="./faq.html">Вопросы и ответы</a>
+        </nav>
+        <nav class="footer-nav footer-nav-secondary" aria-label="Информация">
+          <a href="./docs.html">Документы</a>
+          <a href="./contacts.html">Контакты</a>
+          <a href="./news.html">Информирование</a>
+        </nav>
+        <nav class="footer-nav footer-nav-services" aria-label="Услуги">
           <a href="./videomeeting.html">Видеосвидание</a>
           <a href="./index.html">Денежные переводы</a>
           <a href="./app.html">Мобильное приложение</a>
           <a href="./app.html#app-setup">Инструкция для приложения</a>
           <a href="./unlimited.html">Безлимитный тариф в приложении «Ариадна»</a>
         </nav>
-
-        <nav class="footer-nav footer-nav-secondary" aria-label="Информация">
-          <a href="./payment.html">Оплата услуг</a>
-          <a href="./news.html">Информирование</a>
-          <a href="./faq.html">Вопросы и ответы</a>
-          <a href="./docs.html">Документы</a>
-          <a href="./contacts.html">Контакты</a>
-        </nav>
-
         <div class="footer-contact">
           <a class="footer-phone" href="tel:88005053712">8 (800) 505 37 12</a>
           <a class="footer-mail" href="mailto:info@aripay.ru">info@aripay.ru</a>
-          <p>© ООО «А-Плюс», 2026. Все права защищены.</p>
-          <p>660075, г. Красноярск, ул. Красной Гвардии, дом 24 помещение 7, кабинет 300/5</p>
-          <a class="privacy-link" href="#">Политика в отношении обработки персональных данных</a>
+        </div>
+        <div class="instruction-footer-mobile-nav" aria-label="Навигация в футере">
+          <div>
+            <a href="./payment.html">Оплата услуг</a>
+            <a href="./faq.html">Вопросы и ответы</a>
+            <a href="./docs.html">Документы</a>
+            <a href="./contacts.html">Контакты</a>
+            <a href="./news.html">Информирование</a>
+          </div>
+          <div>
+            <a href="./main.html">Главная</a>
+            <a href="./videomeeting.html">Видеосвидание</a>
+            <a href="./index.html">Денежные переводы</a>
+            <a href="./app.html#app-setup">Инструкция для приложения</a>
+            <a href="./unlimited.html">Безлимитный тариф в приложении «Ариадна»</a>
+          </div>
         </div>
       </div>
     </footer>
 
-    <script src="./script.js"></script>
+    <script src="./script.js?v=mobile-menu"></script>
   </body>
 </html>
