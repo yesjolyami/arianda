@@ -182,6 +182,7 @@ function initMobileMenu() {
 
   const open = () => {
     menu.hidden = false;
+    menu.classList.add("is-open");
     document.body.classList.add("is-mobile-menu-open");
     openButton.setAttribute("aria-expanded", "true");
     window.requestAnimationFrame(() => closeButton.focus());
@@ -189,6 +190,7 @@ function initMobileMenu() {
 
   const close = () => {
     menu.hidden = true;
+    menu.classList.remove("is-open");
     document.body.classList.remove("is-mobile-menu-open");
     openButton.setAttribute("aria-expanded", "false");
   };
@@ -211,7 +213,7 @@ function initMobileMenu() {
   });
 
   window.addEventListener("resize", () => {
-    if (window.innerWidth > 760 && !menu.hidden) close();
+    if (window.innerWidth > 1024 && !menu.hidden) close();
   });
 }
 
@@ -938,6 +940,91 @@ function initPaymentFaqAccordion() {
   syncInitialState();
 }
 
+function createImageZoomModal() {
+  const modal = document.createElement("div");
+  modal.className = "image-zoom-modal";
+  modal.hidden = true;
+  modal.innerHTML = `
+    <div class="image-zoom-modal__backdrop" data-zoom-close></div>
+    <div class="image-zoom-modal__content" role="dialog" aria-modal="true" aria-label="Просмотр изображения">
+      <button type="button" class="image-zoom-modal__close" aria-label="Закрыть просмотр изображения">
+        <span></span><span></span>
+      </button>
+      <img class="image-zoom-modal__image" alt="" />
+    </div>
+  `;
+  document.body.append(modal);
+  return modal;
+}
+
+function initImageZoom() {
+  const modal = createImageZoomModal();
+  const modalImage = modal.querySelector(".image-zoom-modal__image");
+  const closeButton = modal.querySelector(".image-zoom-modal__close");
+  const closeElements = [closeButton, modal.querySelector("[data-zoom-close]")];
+  const excludedSelector = [
+    ".site-header",
+    ".main-hero",
+    ".transfer-hero",
+    ".app-hero",
+    ".hero-section",
+    ".unlim-hero",
+    ".hero-media",
+    ".hero-copy",
+    ".hero-actions",
+    ".hero-card",
+    ".main-hero__media",
+    ".unlim-hero__media",
+    ".app-hero__media",
+    ".transfer-hero__media",
+    ".site-header",
+  ].join(",");
+
+  const isExcluded = (image) => {
+    if (image.closest(excludedSelector)) return true;
+    if (image.closest("a")) return true;
+    if (image.closest("[aria-hidden='true']")) return true;
+    if (image.closest("[class*='icon']")) return true;
+    if (image.src.includes("/icon/")) return true;
+    return false;
+  };
+
+  const zoomableImages = Array.from(document.querySelectorAll("img")).filter((image) => {
+    if (isExcluded(image)) return false;
+    if (!image.src) return false;
+    if (image.naturalWidth && image.naturalWidth < 80) return false;
+    image.dataset.zoomable = "true";
+    return true;
+  });
+
+  const openModal = (image) => {
+    if (!image || !modalImage) return;
+    modalImage.src = image.src;
+    modalImage.alt = image.alt || image.getAttribute("alt") || "";
+    modal.hidden = false;
+    document.body.classList.add("is-image-zoom-open");
+    requestAnimationFrame(() => closeButton?.focus());
+  };
+
+  const closeModal = () => {
+    modal.hidden = true;
+    document.body.classList.remove("is-image-zoom-open");
+    modalImage.src = "";
+  };
+
+  zoomableImages.forEach((image) => {
+    image.addEventListener("click", () => openModal(image));
+  });
+
+  closeElements.forEach((element) => {
+    element?.addEventListener("click", closeModal);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !modal.hidden) closeModal();
+  });
+}
+
 function initMainHeroSlider() {
   const hero = document.querySelector("[data-main-hero]");
   if (!hero) return;
@@ -995,3 +1082,4 @@ initPaymentModal();
 initFaqPage();
 initPaymentFaqAccordion();
 initMainHeroSlider();
+initImageZoom();
